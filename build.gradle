@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group = 'loga.dev7.http'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    compileOnly 'org.projectlombok:lombok:1.18.24'
+    annotationProcessor 'org.projectlombok:lombok:1.18.24'
+    implementation group: 'org.slf4j', name: 'slf4j-simple', version: '2.0.7'
+}
+
+test {
+    useJUnitPlatform()
+}
